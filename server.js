@@ -8,7 +8,7 @@ app.use(express.static("./public"));
 app.use(express.json());
 app.use("/", cartItems);
 
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server is running on PORT: ${port}`);
+
+app.listen(3000, () => {
+    console.log(`Server is running on PORT: 3000`);
 });
