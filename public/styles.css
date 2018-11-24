@@ -1,55 +1,109 @@
 body {
-    background-color: #824C63;
+    background-color: #DAF5FF;
     font-color: #231123;
     font-family: 'Lora', serif;
+    height: 100vw;
+    width: 100vw;
 }
 
-.get-btn {
-    width: 400px;
-    height: 50px;
-    position: fixed;
-    top: 30px;
-    right: 50%;
-    transform: translateX(50%);
-    margin-top: 25px;
+#add-container {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin-top: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.new-item {
+    height: 25px;
+    width: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
     border: 1px solid black;
-    border-radius: 5px;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Lora', serif;
-    background-color: #EFB8A0;
+}
+
+#add-btn {
+    height: 30px;
+    width: 155px;
+    border: none;
+    border: 1px solid black;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+h2 {
+    font-size: 46px;
+    text-align: center;
 }
 
 .main-container {
-    margin-top: 100px;
+    margin: 0 auto;
+    height: auto;
+    width: 1000px;
+    margin-top: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
+    background-color: #87F6FF;
+    border: 1px solid black;
 }
 
 .cart-container {
     height: 200px;
     width: 300px;
-    background-color: #C9EFEF;
-    margin-top: 100px;
+    background-color: #FFBFA0;
+    margin-top: 50px;
     border: 1px solid #231123;
-    border-radius: 5px;
+    margin-bottom: 50px;
 }
 
-.update__input {
+#price-container {
+    background: none;
     display: block;
+    border: none;
+}
+
+label {
+    margin-left: 35px;
 }
 
 #product {
     font-size: 24px;
+    width: 100%;
     text-align: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 15px;
     font-weight: bold;
+    background: none;
+    border: none;
 }
 
 #price {
-    margin-left: 25px;
+    font-size: 16px;
+    height: 35px;
+    margin-top: 15px;
+    background: none;
+    border: none;
 }
 
 #quantity {
-    margin-left: 25px;
+    font-size: 16px;
+    height: 35px;
+    margin-left: 15px;
+    background: none;
+    border: none;
+}
+
+#delete-btn {
+    display: block;
+    background: white;
+    width: 25px;
+    height: 25px;
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
 }
