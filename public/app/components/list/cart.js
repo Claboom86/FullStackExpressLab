@@ -1,7 +1,8 @@
 "use strict";
 const cart = {
     template: `
-<section id="add-container">
+<section id="main">
+<section id="left">
     <form ng-submit="$ctrl.addItem($ctrl.newItem);">
         <input class="new-item" type="text" ng-model="$ctrl.newItem.product" placeholder="Product Name">
         <input class="new-item" type="text" ng-model="$ctrl.newItem.price" placeholder="Price">
@@ -10,21 +11,22 @@ const cart = {
     </form>
 </section>
 
-<h2>Cart</h2>
-
-<section class="main-container">
-    <section class="cart-container" ng-repeat="obj in $ctrl.items">
-        <input id="product" type="text" ng-blur="$ctrl.updateItem(obj);" ng-model="obj.product">
-        <section id="price-container">
-            <label>Price: $</label>
-            <input id="price" type="text" ng-blur="$ctrl.updateItem(obj);" ng-model="obj.price">
-         </section>
-            <label>Quantity: </label>
-        <input id="quantity" class="update-input" type="text" ng-blur="$ctrl.updateItem(obj);" ng-model="obj.quantity">
-
-        <button id="delete-btn" ng-click="$ctrl.removeItem(obj.id);">X</button>
-
+<section id="right">
+    <h2>Cart</h2>   
+    <section class="main-container">
+        
+        <section class="cart-container" ng-repeat="obj in $ctrl.items">
+            <input id="product" type="text" ng-blur="$ctrl.updateItem(obj);" ng-model="obj.product">
+            <section id="price-container">
+                <label>Price: $</label>
+                <input id="price" type="text" ng-blur="$ctrl.updateItem(obj);" ng-model="obj.price">
+            </section>
+                <label>Quantity:</label>
+            <input id="quantity" class="update-input" type="text" ng-blur="$ctrl.updateItem(obj);" ng-model="obj.quantity">
+            <button id="delete-btn" ng-click="$ctrl.removeItem(obj.id);">X</button>
+        </section>
     </section>
+</section>
 </section>
     `,
     controller: ["CartService", function(CartService) {
